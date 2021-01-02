@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: pwd
-      - run: ll
+      - run: ls -la
       - run: apt-get update
       - run: apt-get install scons
       - run: scons --version
