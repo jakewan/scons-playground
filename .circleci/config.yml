@@ -8,8 +8,8 @@ jobs:
       - checkout
       - run: pwd
       - run: ls -la
-      - run: apt-get update
-      - run: apt-get install scons
+      - run: sudo apt-get update
+      - run: sudo apt-get install scons
       - run: scons --version
 
   hello:
