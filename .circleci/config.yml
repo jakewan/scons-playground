@@ -5,25 +5,13 @@ jobs:
     docker:
       - image: cimg/base:stable-20.04
     steps:
-      - checkout
-      - run: pwd
-      - run: ls -la
+      - checkoutå
       - run: sudo apt-get update
       - run: sudo apt-get install scons
       - run: scons --version
-
-  hello:
-    docker:
-      - image: cimg/base:stable-20.04
-    steps:
-      - run: echo "Hello!"
-      - run: cat /etc/issue
 
 workflows:
   version: 2
   build:
     jobs:
-      - hello
-      - build:
-          requires:
-            - hello
+      - build
