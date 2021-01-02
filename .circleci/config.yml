@@ -7,11 +7,22 @@ jobs:
     steps:
       - checkout
       - run: sudo apt-get update
-      - run: sudo apt-get install scons
+      - run: sudo apt-get install python3-pip
+      - run: pip3 install scons
       - run: scons
+  check-versions:
+    docker:
+      - image: cimg/base:stable-20.04
+    steps:
+      - run: sudo apt-get update
+      - run: sudo apt-get install python3-pip
+      - run: pip3 install scons
+      - run: which scons
+      - run: scons --version
 
 workflows:
   version: 2
   build:
     jobs:
+      - check-versions
       - build-default
