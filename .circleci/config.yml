@@ -6,6 +6,10 @@ jobs:
       - image: cimg/base:stable-20.04
     steps:
       - checkout
+      - run: pwd
+      - run: ll
+      - run: apt-get update
+      - run: apt-get install scons
       - run: scons --version
 
   hello:
