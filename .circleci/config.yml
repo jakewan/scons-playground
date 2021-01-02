@@ -13,6 +13,7 @@ jobs:
       - image: cimg/base:stable-20.04
     steps:
       - run: echo "Hello!"
+      - run: cat /etc/issue
 
 workflows:
   version: 2
