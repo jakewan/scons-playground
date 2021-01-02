@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: cimg/base:stable-20.04
     steps:
-      - checkoutå
+      - checkout
       - run: sudo apt-get update
       - run: sudo apt-get install scons
       - run: scons --version
