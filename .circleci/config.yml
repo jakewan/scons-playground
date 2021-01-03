@@ -9,7 +9,7 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install python3-pip
       - run: pip3 install scons
-      - run: scons
+      - run: scons -Q
   check-versions:
     docker:
       - image: cimg/base:stable-20.04

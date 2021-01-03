@@ -1,7 +1,8 @@
-#include <iostream>
+#include "foo.h"
 
 int main(int argc, char **argv)
 {
-    std::cout << "Hello, world!" << std::endl;
+    Foo foo;
+    foo.saySomething("Hello!");
     return 0;
 }
